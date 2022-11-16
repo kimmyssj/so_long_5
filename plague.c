@@ -6,7 +6,7 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:44:00 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/16 15:52:40 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/16 20:26:05 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	plague_initialize(char **map, int x, int y)
 	if (map[y][x + 1] == '0' || map[y][x + 1] == 'C')
 		map[y][x + 1] = '2';
 	if (map[y][x - 1] == '0' || map[y][x - 1] == 'C')
-	map[y][x - 1] = '2';
+		map[y][x - 1] = '2';
 }
 
 void	plague_component(char **map, t_plague *p)
