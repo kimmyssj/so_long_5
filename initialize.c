@@ -6,13 +6,13 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:06:27 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/10 15:52:10 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:58:35 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "solong.h"
 
-int	ber_hwak_in(char *name_of_deb)
+int	ber_check(char *name_of_ber)
 {
 	int	check;
 	int	check1;
@@ -21,11 +21,11 @@ int	ber_hwak_in(char *name_of_deb)
 	idx = -1;
 	check = 1;
 	check1 = 0;
-	while (name_of_deb[++idx])
+	while (name_of_ber[++idx])
 	{
-		if (name_of_deb[idx] == '.')
+		if (name_of_ber[idx] == '.')
 		{
-			check = ft_strcmp("ber", name_of_deb + idx + 1);
+			check = ft_strcmp("ber", name_of_ber + idx + 1);
 			check1 ++;
 		}
 	}
@@ -67,7 +67,7 @@ int	initialize_everything(void **mlx, t_img *img, char *name_of_ber)
 	*mlx = mlx_init();
 	if (*mlx == 0)
 		return (write(2, "mlx_init fail", 14));
-	if (ber_hwak_in(name_of_ber) == 0)
+	if (ber_check(name_of_ber) == 0)
 		return (write(2, "extension not valid", 20));
 	if (initialize_image(mlx, img) == 0)
 		return (write(2, "image initialize fail", 22));
