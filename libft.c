@@ -6,7 +6,7 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:09:06 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/10 15:26:30 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/16 20:07:36 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,10 @@ char	**pointer(char **a)
 	{
 		answer[idx] = ft_strdup(a[idx]);
 		if (answer[idx] == 0)
+		{
 			free_all(&answer);
+			return (0);
+		}
 	}
 	return (answer);
 }
