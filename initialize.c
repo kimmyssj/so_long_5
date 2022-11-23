@@ -6,7 +6,7 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:06:27 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/16 16:58:35 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/17 01:19:39 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,10 @@ int	initialize_everything(void **mlx, t_img *img, char *name_of_ber)
 {
 	*mlx = mlx_init();
 	if (*mlx == 0)
-		return (write(2, "mlx_init fail", 14));
+		error_message(6);
 	if (ber_check(name_of_ber) == 0)
-		return (write(2, "extension not valid", 20));
+		error_message(5);
 	if (initialize_image(mlx, img) == 0)
-		return (write(2, "image initialize fail", 22));
+		error_message(7);
 	return (0);
 }

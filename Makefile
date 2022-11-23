@@ -1,6 +1,6 @@
 NAME = so_long
 
-SRC_A = main.c gnl.c libft.c str_parse.c \
+SRC_A = main.c gnl.c libft.c str_parse.c error_message.c \
 		valid_check.c indexof.c initialize.c map_img_maker.c \
 		itoa.c key_hook.c is_path_valid.c plague.c \
 

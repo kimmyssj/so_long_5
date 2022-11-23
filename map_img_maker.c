@@ -6,7 +6,7 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:06:34 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/10 15:22:41 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:27:16 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,9 @@ int	map_making(t_mlx *mlx, t_img img)
 	width = ft_strlen(mlx->map[0]) - 1;
 	mlx->win = mlx_new_window(mlx->mlx, width * 32, height * 32, "so_long");
 	if (mlx->win == 0)
-	{
-		write(2, "mlx_new_window fail", 20);
-		return (0);
-	}
+		error_message(8);
 	if (mlx_new_image(mlx->mlx, width * 32, height * 32) == 0)
-	{
-		write(2, "mlx_new_image fail", 19);
-		return (0);
-	}
+		error_message(9);
 	image_put_in(mlx, mlx->map, img);
 	return (1);
 }

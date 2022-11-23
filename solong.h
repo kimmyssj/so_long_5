@@ -6,7 +6,7 @@
 /*   By: seungjki <seungjki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 06:09:13 by seungjki          #+#    #+#             */
-/*   Updated: 2022/11/16 15:49:26 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/11/17 01:13:47 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,7 @@ int		down_is_pressed(t_mlx *mlx, t_img img);
 int		right_is_pressed(t_mlx *mlx, t_img img);
 int		up_is_pressed(t_mlx *mlx, t_img img);
 int		map_path_valid(char **map);
+void	error_message(int flag);
 void	plague_initialize(char **map, int x, int y);
 void	plague_component(char **map, t_plague *p);
 void	plague_active(char **map, int idx);
